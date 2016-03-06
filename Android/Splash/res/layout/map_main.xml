@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  	  xmlns:tools="http://schemas.android.com/tools"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:id="@+id/mainLayout"
+    	android:orientation="vertical">
+	
+    	<fragment
+       		android:id="@+id/map"
+        	android:layout_width="match_parent"
+        	android:layout_height="1100px"
+        	android:layout_alignParentTop="true"
+        	class="com.google.android.gms.maps.MapFragment" 
+        	android:name="com.testing.svma.MainActivity"
+        	android:layout_weight="70"/>
+
+    
+<TableLayout
+    		android:id="@+id/tablelayout"
+       		android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/map"
+        	android:layout_marginLeft="1dp"
+        	android:layout_marginTop="1dp"
+        	android:layout_toRightOf="@+id/textView1" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            
+            
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:text="출발지"
+        	android:gravity="center"
+        	android:layout_weight="1"
+          	android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:layout_weight="3"
+            android:layout_marginTop="-10dp"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText> 
+        </TableRow>
+
+      	  <TableRow
+            	android:id="@+id/tableRow2"
+            	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content" >
+    
+            <TextView
+                 android:id="@+id/textViewAddress1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+                 android:text="도착지"
+                 android:layout_weight="1"
+                 android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+            <EditText
+            	android:id="@+id/editTextAddress1"
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:editable="false"
+            	android:inputType="text|textCapWords"
+            	android:layout_weight="3"
+           	 	android:ems="10" ></EditText>
+           	 	
+           	 	<Button
+            android:id="@+id/buttonGetAddress3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+         	android:text="확인"/>
+    
+    </TableRow>
+    </TableLayout>
+		  <Button
+            android:id="@+id/buttonGetAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           	android:layout_below="@+id/tablelayout"
+            android:text="현재 내 위치확인" />
+    
+  	     <LinearLayout
+  	       android:id="@+id/LinearLayoutGettingAddress1"
+  	       android:layout_width="match_parent"
+  	       android:layout_height="match_parent"
+  	       android:orientation="horizontal"
+  	       android:layout_below="@+id/buttonGetAddress"
+  	       android:layout_weight="10" >
+        
+        <Button
+            android:id="@+id/buttonGetAddress1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+         	android:text="이전" />
+        
+          <Button
+            android:id="@+id/buttonGetAddress4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+         	android:text="연결" />
+        
+        
+         <Button
+            android:id="@+id/buttonGetAddress2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+  			android:text="다음" />
+  	         
+        </LinearLayout>
+  	   
+  
+          
+    
+</RelativeLayout>
